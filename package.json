@@ -30,5 +30,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "<h1>Login SignUp Form</h1>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LimoVincent/Login-SignUp-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LimoVincent/Login-SignUp-App/issues"
+  },
+  "homepage": "https://github.com/LimoVincent/Login-SignUp-App#readme"
 }
