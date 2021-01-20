@@ -1,14 +1,19 @@
 {
-  "name": "login-sign-up-app",
+  "name": "developer-jobs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "@ant-design/icons": "^4.4.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "antd": "^4.10.3",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,7 +22,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -31,17 +39,26 @@
       "last 1 safari version"
     ]
   },
-  "description": "<h1>Login SignUp Form</h1>",
+  "description": "Description\r This is a simple starter project for React Native apps on iOS and Android.",
   "main": "index.js",
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LimoVincent/Login-SignUp-App.git"
+    "url": "git+https://github.com/LimoVincent/developer-jobs.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "Developer",
+    "jobs",
+    "api",
+    "react",
+    "axios",
+    "ant",
+    "design"
+  ],
+  "author": "vincent Limo",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LimoVincent/Login-SignUp-App/issues"
+    "url": "https://github.com/LimoVincent/developer-jobs/issues"
   },
-  "homepage": "https://github.com/LimoVincent/Login-SignUp-App#readme"
+  "homepage": "https://github.com/LimoVincent/developer-jobs#readme"
 }
