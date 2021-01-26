@@ -1,8 +1,7 @@
 import './App.css'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Github from './components/Github'
 import { Layout, Menu } from 'antd'
-import { SearchOutlined } from '@ant-design/icons'
 
 import {
   UploadOutlined,
@@ -59,7 +58,7 @@ function App() {
             className='site-layout-sub-header-background'
             style={{ padding: 0 }}
           >
-            Header :::::::::::
+            <h1>Header :: Develper Jobs</h1>
           </Header>
 
           {/* *********************** */}

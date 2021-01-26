@@ -5,28 +5,25 @@ axios.defaults.headers.post['Content-Type'] =
   'application/x-www-form-urlencoded'
 
 function Github({ info, setInfo }) {
-  const [dataset, setDataset] = useState(null)
+  const [more, setMore] = useState(true)
   const { data, query } = info
 
   const Fetchdata = async () => {
-    axios.get(query).then(
-      (response) => {
-        setDataset(() => response.data, [])
-      },
-      [query]
-    )
+    axios.get(query).then((response) => {
+      setInfo(...info, { data: response.data })
+    }, [])
   }
 
   useEffect(() => {
     Fetchdata()
-    console.table(dataset)
+    console.table(data)
   })
   return (
     <div>
       <h1>Github jobs</h1>
 
       <div className='job-container'>
-        {dataset.map(
+        {data.map(
           ({
             id,
             type,
@@ -40,27 +37,29 @@ function Github({ info, setInfo }) {
           }) => (
             <Card
               title={title}
-              extra={<a href='#'>More</a>}
-              style={{ width: 700, margin: 20}}
+              style={{ width: 700, margin: 20 }}
               key={id}
               className='job'
             >
-              <a href={url}>
-                <h4>{title}</h4>
-              </a>
-              <h6>{type}</h6>
-
+              <h5>
+                <a href={url}>{title}</a>
+              </h5>
+              <h7>{type}</h7>
               <p>
                 <strong>{created_at}</strong>
               </p>
               <p>
                 <strong>{location}</strong>
               </p>
-
               <p>
                 <a href={company_url}>{company}</a>
               </p>
-              {description.slice(0, 200)}
+              <span>
+                {more ? description : description.slice(0, 200)}{' '}
+                <button onClick={() => setMore(!more)}>
+                  {more ? 'more...' : 'less'}
+                </button>
+              </span>
             </Card>
           )
         )}
